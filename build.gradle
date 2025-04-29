@@ -40,6 +40,9 @@ dependencies {
 	// HTML 파싱 라이브러리 Jsoup
 	implementation 'org.jsoup:jsoup:1.17.2'
 	
+	// Maria DB
+	implementation 'org.mariadb.jdbc:mariadb-java-client:3.5.3'
+	
 	//마이바티스
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
 	
