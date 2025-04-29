@@ -9,7 +9,7 @@ class RankCollectServiceTest {
 	
 	@Test
 	public void testRankCollect() throws Exception {
-		rankCollectService.rankCollect(1, 20, 2, 1285686831, null);
+		rankCollectService.rankCollect(1, 1, 1, 0, null);
 		
 	}
 }
