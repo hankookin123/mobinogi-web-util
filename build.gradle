@@ -50,6 +50,9 @@ dependencies {
 	implementation platform('io.awspring.cloud:spring-cloud-aws-dependencies:3.0.4')
 	implementation 'io.awspring.cloud:spring-cloud-aws-starter-parameter-store'
 	
+	//ssh 터널링 jsch 라이브러리 > Apache Mina SSHD로 변경
+	implementation 'org.apache.sshd:sshd-core:2.13.1'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	
 }
 
