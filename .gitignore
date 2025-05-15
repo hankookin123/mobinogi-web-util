@@ -5,6 +5,8 @@
 .env
 
 ### Eclipse ###
+.gz
+.log
 .metadata
 bin/
 tmp/

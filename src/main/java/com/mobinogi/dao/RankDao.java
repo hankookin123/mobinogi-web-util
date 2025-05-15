@@ -10,10 +10,5 @@ import com.mobinogi.dto.rank.RankingListDto;
 @Mapper
 public interface RankDao {
 	
-	public List<RankingListDto> rankInsert(
-			@Param("rank") String rank,
-			@Param("server") String server,
-			@Param("charName") String charName,
-			@Param("clazz") String clazz,
-			@Param("power") String power);
+	public void deianInsert(@Param("list") List<RankingListDto> list);
 }
