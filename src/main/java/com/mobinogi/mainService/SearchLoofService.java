@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.mobinogi.dao.RankDao;
@@ -37,9 +38,9 @@ public class SearchLoofService {
 		for (Integer code : ClassCode.직업_코드맵.values()) {
 			List<RankingListDto> rankingList = new ArrayList<>();
 			for (int i = 0; i < 50; i++) {
-				total_search++;
 				try {
 					rankCollectService.rankCollect(1, i, 1, code, null, rankingList);
+					total_search++;
 					Thread.sleep(random.nextInt(500)+2500);
 					System.out.println("총 횟수 : " + total_search + "  /  " 
 							+ ClassCode.코드_직업맵.get(code) + " 페이지 : " + i);
@@ -55,8 +56,9 @@ public class SearchLoofService {
 		}		
 		
 		LocalDateTime now2 = LocalDateTime.now();
-		System.out.println("데이터수집 시작 : " + now1);
-		System.out.println("데이터수집 종료 : " + now2);
+		System.out.println("--- 데이터수집 시작 : " + now1);
+		System.out.println("--- 데이터수집 종료 : " + now2);
+		System.out.println("--- 검색한 페이지 수 : " + total_search);
 	}
 	
 }

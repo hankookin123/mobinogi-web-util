@@ -5,10 +5,10 @@
 <mapper namespace="com.mobinogi.dao.RankDao">
   
   <insert id="deianInsert">
-  	INSERT INTO deian_server(rank, server, char_name, clazz, power) 
+  	INSERT INTO deian_server(c_p_rank, c_name, class_id, c_power) 
   	VALUES
   	<foreach collection="list" item="item" separator=",">
-  		(#{item.rank}, #{item.server}, #{item.charName}, #{item.clazz}, #{item.power})
+  		(#{item.rank}, #{item.charName}, #{item.clazz}, #{item.power})
   	</foreach>
   </insert>
 </mapper>

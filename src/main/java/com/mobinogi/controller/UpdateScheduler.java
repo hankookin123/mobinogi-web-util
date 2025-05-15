@@ -14,7 +14,7 @@ public class UpdateScheduler {
 	private final SearchLoofService searchLoofService;
 	
 	@Scheduled(cron = "0 0 4 * * *", zone = "Asia/Seoul")
-	public void searchAndUpdate() {
+	public void dbUpdateSchedule() {
 		try {
 			searchLoofService.dbUpdate();
 		} catch (Exception e) {
